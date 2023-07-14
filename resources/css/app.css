@@ -1,0 +1,67 @@
+@import url("https://use.typekit.net/srz0ovh.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a{
+    @apply text-blue-500 underline;
+}
+
+
+
+
+.draggable-mirror{
+    @apply border-zinc-200 dark:border-zinc-700 w-full max-w-[calc(100%-2rem)] min-w-[calc(100%-2rem)] md:min-w-[calc(60%-2.75rem)] lg:max-w-[calc(60%-2rem-2.5rem)] xl:max-w-[calc(48rem-2rem-2.5rem)] xl:min-w-[725px];
+}
+
+
+body.draggable--is-dragging .cursor-grab{
+    @apply cursor-grabbing;
+}
+
+body.draggable--is-dragging a,
+body.draggable--is-dragging button,
+body.draggable--is-dragging input{
+    @apply pointer-events-none;
+}
+
+
+
+
+
+
+/* Toast */
+
+body .swal2-popup{
+    @apply rounded-xl;
+}
+
+/* .swal2-popup.swal2-show{
+    animation: toast 0.3s cubic-bezier(0,0,.03,1) !important;
+}
+
+@keyframes toast{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+} */
+
+body .swal2-popup.swal2-toast{
+    @apply bg-black dark:bg-white py-4 px-5 leading-none;
+
+}
+
+body .swal2-title{
+    @apply text-white dark:text-black;
+}
+
+body .swal2-popup.swal2-toast .swal2-title{
+    @apply m-0;
+}
+
+body .swal2-timer-progress-bar{
+    @apply bg-white/30;
+}
